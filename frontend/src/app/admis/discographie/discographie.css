@@ -1,0 +1,285 @@
+.admin-discographie {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 40px;
+}
+
+/* HEADER */
+
+.discographie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.admin-small-title {
+  color: #e9b51c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.discographie-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.discographie-header p {
+  color: #999;
+  margin-top: 8px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 11px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  border-color: #e9b51c;
+  color: #e9b51c;
+}
+
+/* MESSAGE */
+
+.admin-message {
+  background: rgba(233, 181, 28, 0.1);
+  border: 1px solid rgba(233, 181, 28, 0.4);
+  color: #e9b51c;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* CARDS */
+
+.music-form-card,
+.music-list-section {
+  background: #121212;
+  border: 1px solid #252525;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.section-title span,
+.section-title p {
+  color: #777;
+  font-size: 13px;
+}
+
+/* FORMULAIRE */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0b0b0b;
+  border: 1px solid #303030;
+  color: #fff;
+  padding: 13px 15px;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #e9b51c;
+}
+
+.form-group input::placeholder {
+  color: #555;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.save-button,
+.cancel-button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.save-button {
+  background: #e9b51c;
+  color: #000;
+}
+
+.save-button:hover {
+  background: #f5c52f;
+  transform: translateY(-1px);
+}
+
+.cancel-button {
+  background: #252525;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background: #333;
+}
+
+/* TABLE */
+
+.music-table-wrapper {
+  overflow-x: auto;
+}
+
+.music-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.music-table th {
+  text-align: left;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 15px;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.music-table td {
+  padding: 18px 15px;
+  border-bottom: 1px solid #202020;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.music-table td strong {
+  color: #fff;
+}
+
+.music-table tr:hover td {
+  background: #171717;
+}
+
+/* SPOTIFY */
+
+.spotify-link {
+  display: inline-block;
+  color: #1db954;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.spotify-link:hover {
+  text-decoration: underline;
+}
+
+.no-link {
+  color: #555;
+}
+
+/* ACTIONS */
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 8px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-button {
+  background: #242424;
+  color: #e9b51c;
+}
+
+.edit-button:hover {
+  background: #333;
+}
+
+.delete-button {
+  background: rgba(180, 40, 40, 0.15);
+  color: #ff6b6b;
+}
+
+.delete-button:hover {
+  background: rgba(180, 40, 40, 0.3);
+}
+
+/* VIDE */
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  padding: 50px 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .admin-discographie {
+    padding: 25px 15px;
+  }
+
+  .discographie-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .music-form-card,
+  .music-list-section {
+    padding: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,2530 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #ffffff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.site-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  /* Transparence légère */
+  background: rgba(0, 0, 0, 0.55);
+
+  padding: 12px 5%;
+}
+
+.navbar-container {
+  max-width: 1150px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 55px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #e9b51c;
+}
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 1000px;
+  min-height: 550px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  background-image: url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.6)
+    );
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-main {
+  display: inline-block;
+  padding: 17px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.btn-white {
+  background: white;
+  color: #111;
+}
+
+.btn-yellow {
+  background: #e9b51c;
+  color: #111;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.home-content {
+  background: #050505;
+}
+
+.home-section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 90px 5%;
+}
+
+/* =========================
+   TITRES
+========================= */
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading.left {
+  text-align: left;
+}
+
+.section-heading p {
+  color: #e9b51c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.section-heading span {
+  color: #e9b51c;
+}
+
+/* =========================
+   CONCERTS
+========================= */
+
+.concert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.concert-card {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  background: #101010;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.concert-card:hover {
+  border-color: #e9b51c;
+  transform: translateY(-5px);
+}
+
+.concert-date {
+  min-width: 70px;
+  text-align: center;
+  border-right: 1px solid #333;
+  padding-right: 20px;
+}
+
+.concert-date strong {
+  display: block;
+  font-size: 35px;
+  color: #e9b51c;
+}
+
+.concert-date span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.concert-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.concert-info p {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.video-card {
+  background: #101010;
+  border: 1px solid #222;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* =========================
+   ACTUALITES
+========================= */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-card {
+  background: #101010;
+  border: 1px solid #222;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  border-color: #e9b51c;
+}
+
+.news-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 25px;
+}
+
+.news-content small {
+  color: #e9b51c;
+  font-size: 11px;
+}
+
+.news-content h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.news-content p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* =========================
+   GALERIE
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  background: #101010;
+  border: 1px solid #222;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MESSAGES VIDES
+========================= */
+
+.empty-message,
+.empty-media {
+  padding: 40px;
+  text-align: center;
+  background: #101010;
+  color: #666;
+  border: 1px solid #222;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .concert-grid,
+  .news-grid,
+  .gallery-grid,
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-main {
+    text-align: center;
+  }
+}
+
+/* =========================
+   BIOGRAPHIE
+========================= */
+
+.bio-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 40px;
+  background: #101010;
+  border: 1px solid #222;
+}
+
+.bio-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.bio-content p {
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   DISCOGRAPHIE
+========================= */
+
+.music-list {
+  background: #101010;
+  border: 1px solid #222;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #222;
+  transition: 0.3s;
+}
+
+.music-item:last-child {
+  border-bottom: none;
+}
+
+.music-item:hover {
+  background: #151515;
+}
+
+.music-number {
+  color: #e9b51c;
+  font-weight: 900;
+  width: 35px;
+}
+
+.music-cover {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.music-details {
+  flex: 1;
+}
+
+.music-details h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.music-details span {
+  color: #777;
+  font-size: 12px;
+}
+
+.music-item audio {
+  width: 220px;
+}
+
+.section-button {
+  text-align: center;
+  margin-top: 35px;
+}
+
+@media (max-width: 700px) {
+  .music-item {
+    flex-wrap: wrap;
+  }
+
+  .music-details {
+    min-width: 150px;
+  }
+
+  .music-item audio {
+    width: 100%;
+  }
+}  
+
+/* =========================
+   PAGE BIOGRAPHIE
+========================= */
+
+.biographie-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  color: #fff;
+
+  /* IMAGE SUR TOUTE LA PAGE */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.60)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+/* Ta Navbar garde son propre fond.
+   Ne modifie pas son CSS ici. */
+
+
+/* =========================
+   EN-TÊTE BIOGRAPHIE
+========================= */
+
+.page-header {
+  width: 100%;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px 40px;
+
+  /* IMPORTANT : TRANSPARENT */
+  background: transparent;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.page-header h1 {
+  margin: 0 0 15px;
+
+  color: #fff;
+
+  font-size: clamp(50px, 8vw, 100px);
+  line-height: 0.95;
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.page-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 20px auto 0;
+
+  background: #e9b51c;
+}
+
+.page-header p {
+  margin: 0;
+
+  color: #ddd;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.content-section {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 60px 30px 100px;
+
+  /* IMPORTANT :
+     AUCUNE BANDE NOIRE */
+  background: transparent;
+
+  position: relative;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.content-section h2 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 30px;
+  padding: 0;
+
+  color: #e9b51c;
+
+  font-size: 38px;
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+.content-section h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -12px;
+
+  width: 60px;
+  height: 4px;
+
+  background: #e9b51c;
+}
+
+
+/* =========================
+   TEXTE
+========================= */
+
+.content-section p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   IMPORTANT :
+   SUPPRIMER LES FONDS NOIRS
+========================= */
+
+.biographie-page .page-header,
+.biographie-page .content-section {
+  background-color: transparent !important;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .page-header {
+    min-height: 250px;
+    padding: 70px 20px 35px;
+  }
+
+  .page-header h1 {
+    font-size: 55px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+  }
+
+  .content-section {
+    padding: 45px 20px 70px;
+  }
+
+  .content-section h2 {
+    font-size: 30px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+/* =========================
+   CONTENU BIOGRAPHIE
+========================= */
+
+.bio-content {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 40px 0 80px;
+}
+
+.bio-content h2 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+
+  color: #e9b51c;
+
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+.bio-content h2:first-child {
+  margin-top: 0;
+}
+
+.bio-content h2::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 4px;
+
+  margin-top: 12px;
+
+  background: #e9b51c;
+}
+
+.bio-content p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #eee;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  text-align: left;
+}
+
+/* =========================
+   PAGE DISCOGRAPHIE
+========================= */
+
+.discographie-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  color: #fff;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.70)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.discographie-header {
+  width: 100%;
+
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px 40px;
+
+  background: transparent;
+
+  border-bottom: 1px solid rgba(255,255,255,0.20);
+}
+
+.discographie-header h1 {
+  margin: 0 0 15px;
+
+  color: #fff;
+
+  font-size: clamp(50px, 8vw, 90px);
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+.discographie-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 20px auto 0;
+
+  background: #e9b51c;
+}
+
+.discographie-header p {
+  margin: 0;
+
+  color: #ddd;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.discographie-content {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 60px 30px 100px;
+
+  background: transparent;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.discographie-title h2 {
+  margin: 0 0 40px;
+
+  color: #e9b51c;
+
+  font-size: 34px;
+
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   GRILLE ALBUMS
+========================= */
+
+.albums-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+
+/* =========================
+   CARTE ALBUM
+========================= */
+
+.album-card {
+  overflow: hidden;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #e9b51c;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.album-image {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.album-card:hover .album-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.album-info {
+  padding: 20px;
+}
+
+.album-info h3 {
+  margin: 0 0 8px;
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.album-info span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #aaa;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.album-info button {
+  padding: 10px 20px;
+
+  border: none;
+
+  background: #e9b51c;
+
+  color: #050505;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  border-radius: 3px;
+
+  transition: 0.3s ease;
+}
+
+.album-info button:hover {
+  background: #fff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .albums-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .discographie-header {
+    min-height: 250px;
+
+    padding: 70px 20px 35px;
+  }
+
+  .discographie-header h1 {
+    font-size: 52px;
+  }
+
+  .discographie-content {
+    padding: 45px 20px 70px;
+  }
+
+  .albums-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   BOUTON ÉCOUTER
+========================= */
+
+.listen-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+
+  background: #1DB954;
+  color: #000;
+
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+
+  border-radius: 25px;
+
+  transition: 0.3s ease;
+}
+
+.listen-button:hover {
+  background: #1ed760;
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   PAGE VIDÉOS
+========================= */
+
+.videos-page {
+  min-height: 100vh;
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.88)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.videos-header {
+  width: 100%;
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 90px 20px 35px;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.videos-header h1 {
+  margin: 0 0 15px;
+
+  font-size: clamp(50px, 8vw, 90px);
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+}
+
+.videos-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 4px;
+
+  margin: 18px auto 0;
+
+  background: #e9b51c;
+}
+
+.videos-header p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.videos-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 55px 30px 80px;
+}
+
+.videos-title {
+  margin-bottom: 30px;
+}
+
+.videos-title h2 {
+  margin: 0;
+
+  color: #e9b51c;
+
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.videos-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.video-card {
+  overflow: hidden;
+
+  background: rgba(10, 10, 10, 0.85);
+
+  border: 1px solid #292929;
+
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.video-image {
+  position: relative;
+
+  width: 100%;
+  height: 220px;
+
+  overflow: hidden;
+}
+
+.video-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover .video-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   BOUTON PLAY
+========================= */
+
+.play-button {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e9b51c;
+
+  color: #111;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-size: 22px;
+
+  transition: 0.3s ease;
+}
+
+.play-button:hover {
+  background: #fff;
+
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.video-info {
+  padding: 18px 20px 22px;
+}
+
+.video-info h3 {
+  margin: 0 0 8px;
+
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.video-info span {
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .videos-header {
+    min-height: 200px;
+
+    padding: 90px 20px 30px;
+  }
+
+  .videos-header h1 {
+    font-size: 55px;
+  }
+
+  .videos-content {
+    padding: 40px 18px 60px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-image {
+    height: 210px;
+  }
+
+}
+
+/* =========================
+   PAGE GALERIE
+========================= */
+
+.galerie-page {
+  min-height: 100vh;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.90)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.galerie-header {
+  width: 100%;
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 90px 20px 35px;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.galerie-header h1 {
+  margin: 0 0 15px;
+
+  color: #fff;
+
+  font-size: clamp(50px, 8vw, 90px);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+}
+
+.galerie-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+  height: 4px;
+
+  margin: 18px auto 0;
+
+  background: #e9b51c;
+}
+
+.galerie-header p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.galerie-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 55px 30px 80px;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.galerie-title {
+  margin-bottom: 30px;
+}
+
+.galerie-title h2 {
+  margin: 0;
+
+  color: #e9b51c;
+
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.gallery-card {
+  overflow: hidden;
+
+  background: rgba(10, 10, 10, 0.85);
+
+  border: 1px solid #292929;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #e9b51c;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.gallery-image {
+  width: 100%;
+  height: 260px;
+
+  overflow: hidden;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.06);
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.gallery-info {
+  padding: 15px 18px 18px;
+}
+
+.gallery-info h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================
+   AUCUNE PHOTO
+========================= */
+
+.galerie-empty {
+  color: #aaa;
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .galerie-header {
+    min-height: 200px;
+
+    padding: 90px 20px 30px;
+  }
+
+  .galerie-header h1 {
+    font-size: 55px;
+  }
+
+  .galerie-header p {
+    font-size: 14px;
+  }
+
+  .galerie-content {
+    padding: 40px 18px 60px;
+  }
+
+  .galerie-title h2 {
+    font-size: 27px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+    height: 230px;
+  }
+
+}
+
+/* =========================
+   PAGE CONCERTS
+========================= */
+
+.concerts-page {
+  min-height: 100vh;
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.concerts-header {
+  width: 100%;
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 90px 20px 40px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.concerts-header h1 {
+  margin: 0 0 15px;
+
+  color: #fff;
+
+  font-size: clamp(50px, 8vw, 90px);
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+.concerts-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 18px auto 0;
+
+  background: #e9b51c;
+}
+
+.concerts-header p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 17px;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.concerts-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 60px 30px 90px;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.concerts-title {
+  margin-bottom: 35px;
+}
+
+.concerts-title h2 {
+  display: inline-block;
+
+  margin: 0;
+
+  color: #e9b51c;
+
+  font-size: 32px;
+
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.concerts-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.concert-card {
+  overflow: hidden;
+
+  background: rgba(10, 10, 10, 0.9);
+
+  border: 1px solid #292929;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.concert-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #e9b51c;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.concert-image {
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+}
+
+.concert-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+.concert-card:hover .concert-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.concert-info {
+  padding: 25px;
+}
+
+.concert-date {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #e9b51c;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.concert-info h3 {
+  margin: 0 0 8px;
+
+  color: #fff;
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.concert-info p {
+  margin: 0 0 22px;
+
+  color: #aaa;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.concert-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border-radius: 30px;
+
+  background: #e9b51c;
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+
+  transition: 0.3s ease;
+}
+
+.concert-button:hover {
+  background: #fff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 900px) {
+
+  .concerts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .concerts-header {
+    min-height: 220px;
+
+    padding: 100px 20px 35px;
+  }
+
+  .concerts-header h1 {
+    font-size: 55px;
+  }
+
+  .concerts-header p {
+    font-size: 15px;
+  }
+
+  .concerts-content {
+    padding: 45px 20px 70px;
+  }
+
+  .concerts-title h2 {
+    font-size: 26px;
+  }
+
+  .concerts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concert-image {
+    height: 230px;
+  }
+
+}
+
+/* =========================
+   PAGE CONTACT
+========================= */
+
+.contact-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  color: #fff;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.60),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("/images/but-na-filet.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.contact-header {
+  width: 100%;
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 20px 50px;
+
+  background: rgba(0, 0, 0, 0.30);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.contact-header h1 {
+  margin: 0 0 15px;
+
+  color: #fff;
+
+  font-size: clamp(50px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+  font-style: italic;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+.contact-header h1::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 4px;
+
+  margin: 20px auto 0;
+
+  background: #e9b51c;
+}
+
+.contact-header p {
+  margin: 0;
+
+  max-width: 650px;
+
+  color: #ccc;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
+
+.contact-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 70px 30px 100px;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.contact-title {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.contact-title h2 {
+  margin: 0 0 25px;
+
+  color: #e9b51c;
+
+  font-size: 38px;
+
+  font-weight: 900;
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+.contact-title p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #ccc;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CARTES
+========================= */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.contact-card {
+  padding: 35px 25px;
+
+  text-align: center;
+
+  background: rgba(10, 10, 10, 0.85);
+
+  border: 1px solid #292929;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #e9b51c;
+}
+
+
+/* =========================
+   ICÔNE
+========================= */
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #e9b51c;
+
+  color: #111;
+
+  font-size: 26px;
+
+  font-weight: 900;
+}
+
+
+/* =========================
+   TITRE CARTE
+========================= */
+
+.contact-card h3 {
+  margin-bottom: 15px;
+
+  color: #fff;
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.contact-card p {
+  min-height: 50px;
+
+  margin-bottom: 25px;
+
+  color: #aaa;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.contact-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 45px;
+
+  padding: 0 22px;
+
+  border-radius: 30px;
+
+  background: #e9b51c;
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+
+  background: #fff;
+}
+
+
+/* =========================
+   RÉSEAUX
+========================= */
+
+.social-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.social-links a {
+  padding: 8px 12px;
+
+  color: #fff;
+
+  border: 1px solid #444;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #e9b51c;
+
+  color: #111;
+
+  border-color: #e9b51c;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+   .contact-form-card {
+    grid-column: span 1;
+  }
+
+  .contact-header h1 {
+    font-size: 55px;
+  }
+
+  .contact-content {
+    padding: 50px 20px 70px;
+  }
+
+  .contact-title h2 {
+    font-size: 30px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+   FORMULAIRE CONTACT
+========================= */
+
+.contact-form-card {
+  grid-column: span 2;
+  text-align: left;
+}
+
+.contact-form-card .contact-icon {
+  margin-left: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background: #151515;
+
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  color: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e9b51c;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact-form .contact-button {
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+/* =========================
+   RÉSEAUX SOCIAUX
+========================= */
+
+.social-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.social-button {
+  width: 100%;
+
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.8px;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.social-button svg {
+  font-size: 19px;
+}
+
+.social-button:hover {
+  transform: translateY(-3px);
+
+  opacity: 0.9;
+}
+
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.social-button.instagram {
+  background: linear-gradient(
+    45deg,
+    #f9ce34,
+    #ee2a7b,
+    #6228d7
+  );
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
+
+.social-button.facebook {
+  background: #1877f2;
+}
+
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.social-button.youtube {
+  background: #ff0000;
+}
+
+
+/* =========================
+   TIKTOK
+========================= */
+
+.social-button.tiktok {
+  background: #000;
+
+  border: 1px solid #333;
+}
+
+/* =========================
+   BIOGRAPHIE — BLOCS
+========================= */
+
+.bio-content {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 70px 30px 100px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================
+   BLOC BIOGRAPHIE
+========================= */
+.bio-block {
+  padding: 35px;
+
+  /* Effet verre transparent */
+  background: rgba(255, 255, 255, 0.08);
+
+  /* Flou de ce qui se trouve derrière */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Bordure légère */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 18px;
+
+  min-height: 220px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.bio-block:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: rgba(233, 181, 28, 0.6);
+
+  transform: translateY(-20px);
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.bio-block h2 {
+  margin: 0 0 20px;
+
+  color: #e9b51c;
+
+  font-size: 28px;
+
+  font-weight: 900;
+
+  font-style: italic;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   TEXTE
+========================= */
+
+.bio-block p {
+  margin: 0;
+
+  color: #ccc;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .bio-content {
+    grid-template-columns: 1fr;
+
+    padding: 50px 20px 70px;
+  }
+
+  .bio-block {
+    padding: 25px;
+
+    min-height: auto;
+  }
+
+  .bio-block h2 {
+    font-size: 24px;
+  }
+
+}

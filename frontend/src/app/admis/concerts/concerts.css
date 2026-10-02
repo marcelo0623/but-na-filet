@@ -1,0 +1,309 @@
+.admin-concerts {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 40px;
+}
+
+.concerts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.admin-small-title {
+  color: #e9b51c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.concerts-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.concerts-header p {
+  color: #999;
+  margin-top: 8px;
+}
+
+.back-button {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 11px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  border-color: #e9b51c;
+  color: #e9b51c;
+}
+
+.admin-message {
+  background: rgba(233, 181, 28, 0.1);
+  border: 1px solid rgba(233, 181, 28, 0.4);
+  color: #e9b51c;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.concert-form-card,
+.concert-list-section {
+  background: #121212;
+  border: 1px solid #252525;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.section-title p {
+  color: #777;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0b0b0b;
+  border: 1px solid #303030;
+  color: #fff;
+  padding: 13px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #e9b51c;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.save-button,
+.cancel-button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.save-button {
+  background: #e9b51c;
+  color: #000;
+}
+
+.save-button:hover {
+  background: #f5c52f;
+}
+
+.cancel-button {
+  background: #252525;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background: #333;
+}
+
+/* LISTE */
+
+.concert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.concert-admin-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  background: #0d0d0d;
+  border: 1px solid #242424;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.concert-admin-card:hover {
+  border-color: #444;
+}
+
+.concert-date {
+  width: 75px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #e9b51c;
+  color: #000;
+  border-radius: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.concert-date span {
+  font-size: 14px;
+}
+
+.concert-info h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+
+.concert-info p {
+  margin: 4px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.concert-info .description {
+  color: #666;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-a_venir {
+  background: rgba(233, 181, 28, 0.15);
+  color: #e9b51c;
+}
+
+.status-termine {
+  background: rgba(80, 180, 100, 0.15);
+  color: #69d17d;
+}
+
+.status-annule {
+  background: rgba(220, 70, 70, 0.15);
+  color: #ff6b6b;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 9px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-button {
+  background: #242424;
+  color: #e9b51c;
+}
+
+.edit-button:hover {
+  background: #333;
+}
+
+.delete-button {
+  background: rgba(180, 40, 40, 0.15);
+  color: #ff6b6b;
+}
+
+.delete-button:hover {
+  background: rgba(180, 40, 40, 0.3);
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  padding: 50px 20px;
+}
+
+@media (max-width: 850px) {
+  .admin-concerts {
+    padding: 25px 15px;
+  }
+
+  .concerts-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .concert-admin-card {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    width: 100%;
+  }
+}
