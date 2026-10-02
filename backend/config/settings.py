@@ -26,12 +26,20 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() == "true"
 
+allowed_hosts_env = os.environ.get(
+    "DJANGO_ALLOWED_HOSTS",
+    "127.0.0.1,localhost"
+)
+
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+    for host in allowed_hosts_env.split(",")
     if host.strip()
 ]
 
+# Domaine Render du backend
+if "but-na-filet.onrender.com" not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append("but-na-filet.onrender.com")
 
 # ============================================================
 # APPLICATIONS
@@ -208,6 +216,7 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://but-na-filet.onrender.com",
 ]
 
 
