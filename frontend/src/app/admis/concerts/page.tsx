@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./concerts.css";
 
-const API_URL = "http://127.0.0.1:8000/api/concerts/";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/concerts/`;
 
 type Concert = {
   id: number;
