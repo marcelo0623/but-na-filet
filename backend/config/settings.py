@@ -202,8 +202,8 @@ MEDIA_ROOT = BASE_DIR / "media"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://but-na-filet.vercel.app",
 ]
-
 
 # En production, on ajoutera l'URL Vercel
 # directement dans les variables d'environnement Render.
@@ -216,6 +216,7 @@ CORS_ALLOWED_ORIGINS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://but-na-filet.vercel.app",
     "https://but-na-filet.onrender.com",
 ]
 
