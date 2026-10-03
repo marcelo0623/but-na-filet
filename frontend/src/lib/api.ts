@@ -1,10 +1,10 @@
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+
 export async function getBiographies() {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/biographies/",
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${API_URL}/api/biographies/`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Impossible de récupérer les biographies");
@@ -14,12 +14,9 @@ export async function getBiographies() {
 }
 
 export async function getMusiques() {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/musiques/",
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${API_URL}/api/musiques/`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Impossible de récupérer les musiques");
@@ -29,12 +26,9 @@ export async function getMusiques() {
 }
 
 export async function getVideos() {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/videos/",
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${API_URL}/api/videos/`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Impossible de récupérer les vidéos");
@@ -44,12 +38,9 @@ export async function getVideos() {
 }
 
 export async function getConcerts() {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/concerts/",
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${API_URL}/api/concerts/`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Impossible de récupérer les concerts");
@@ -59,12 +50,9 @@ export async function getConcerts() {
 }
 
 export async function getGalerie() {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/galerie/",
-    {
-      cache: "no-store",
-    }
-  );
+  const response = await fetch(`${API_URL}/api/galerie/`, {
+    cache: "no-store",
+  });
 
   if (!response.ok) {
     throw new Error("Impossible de récupérer la galerie");
@@ -79,16 +67,13 @@ export async function envoyerMessage(data: {
   sujet: string;
   message: string;
 }) {
-  const response = await fetch(
-    "http://127.0.0.1:8000/api/messages/",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }
-  );
+  const response = await fetch(`${API_URL}/api/messages/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
 
   if (!response.ok) {
     throw new Error("Impossible d'envoyer le message");

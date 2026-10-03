@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "./videos.css";
 
-const API_URL = "http://127.0.0.1:8000/api/videos/";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/videos/`;
 
 type Video = {
   id: number;

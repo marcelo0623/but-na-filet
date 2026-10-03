@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import "./galerie.css";
 
-const API_URL = "http://127.0.0.1:8000/api/galerie/";
-const BACKEND_URL = "http://127.0.0.1:8000";
+const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/galerie/`;
+const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 
 type Galerie = {
   id: number;
